@@ -1,0 +1,75 @@
+alias gfw="export http_proxy=http://$MASTER_IP:10809 https_proxy=http://$MASTER_IP:10809"
+
+# https://github.com/PhrozenByte/rmtrash
+alias rm='rmtrash'
+alias rmdir='rmdirtrash'
+
+alias sudo='sudo '
+alias disproxy='unset http_proxy https_proxy'
+alias unproxy='unset http_proxy https_proxy'
+alias cls="clear"
+alias ga.='git add .'
+alias gs='git status'
+alias gba='git branch -a'
+alias gp='git push'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias vs='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+# alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias code='/mnt/c/Users/hisenjk/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
+alias ys='yarn start'
+alias yd='yarn dev'
+alias ls='ls -la'
+alias ll='ls -ls'
+alias sa='source ~/.zshrc'
+# alias glg='git log --pretty=format:"%h %ad %an  %s" --date='format:%Y-%m-%d %H:%M''
+alias glgd='git log --oneline --decorate'
+alias glgg='git log --oneline --decorate --graph'
+# alias glgx='git log --pretty=format:"%h %ad %an  %s" --date='format:%Y-%m-%d %H:%M' --author='xuxinsheng''
+alias pp='fzf --preview '"'"'[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'"'"
+
+
+alias gc='git checkout $1'
+#function gc(){
+#  git checkout $1;
+#}
+
+# git branch |grep '.*' |xargs git branch -D
+# gbda(){
+#  git branch |grep '.*' |xargs git branch -D
+# }
+
+alias gbd='git branch -d $1'
+# function gbd () { git branch -d $1; }
+
+alias gcm='git commit -m $1'
+# function gcm () { git commit -m $1; }
+
+# 在中path viewer 打开文件夹
+pf () { open -a "Path Finder.app" $1; }
+
+#md () { open -a "Typora.app" $1; }
+
+# /Applications/VSCodium.app/Contents/Resources/app/bin/code
+v () { open -a "VSCodium.app" $1; }
+vc () { open -a "VSCodium.app" $1; }
+
+# proxychains-ng 文档： https://www.hi-linux.com/posts/48321.html
+# alias pc='proxychains4'
+
+alias py="export ALL_PROXY=http://$MASTER_IP:10809"
+
+# export PATH=$PATH:~/development/flutter/bin # flutter 开发环境
+# export ANDROID_HOME=~/development/android-sdk
+# export PATH=${ANDROID_HOME}:$PATH
+# export PATH=${PATH}:${ANDROID_HOME}/tools
+# export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# export PUB_HOSTED_URL=https://pub.flutter-io.cn
+# export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+# export PATH="/usr/local/opt/icu4c/bin:$PATH"
+# export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+# export PATH="/usr/local/opt/dart@2/bin:$PATH"
+
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
